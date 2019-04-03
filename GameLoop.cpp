@@ -36,7 +36,7 @@ void GameLoop::setRunning(bool value){
 void GameLoop::startGame(){
     cout << "----------------------------- \n \n Welcome to Clue! \n \n----------------------------- " << endl;
     setRunning(true);
-    while(!getRunning()){
+    while(getRunning()){
         // game logic goes here
     }
 };
