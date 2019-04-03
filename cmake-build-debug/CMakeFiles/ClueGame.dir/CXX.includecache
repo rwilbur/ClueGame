@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.cpp
+GameLoop.h
+C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.h
+
+C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.h
+fstream
+-
+iostream
+-
+iomanip
+-
+string
+-
+vector
+-
+
+C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/main.cpp
+iostream
+-
+GameLoop.h
+C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.h
+
