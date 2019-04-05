@@ -3,4 +3,5 @@ project(ClueGame)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(ClueGame main.cpp GameLoop.cpp GameLoop.h)
+add_executable(ClueGame main.cpp GameLoop.cpp GameLoop.h Graphics.cpp Graphics.h)
+target_link_libraries(ClueGame -lOpenGL32 -lfreeGLUT)

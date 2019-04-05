@@ -42,7 +42,7 @@ public:
     /**
      * Starts the game loop
      */
-    void startGame();
+    void startGame(int argc, char *argv[]);
 
     /**
      * Ends the game loop
