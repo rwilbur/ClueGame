@@ -4,15 +4,13 @@
 
 #include "GameLoop.h"
 
-/**
- * Determines if the game loop should exit
- */
-bool running = false;
 
 /**
  * Default Constructor
  */
-GameLoop::GameLoop(){};
+GameLoop::GameLoop(): running(false){
+
+};
 
 /**
  * Get running
