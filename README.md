@@ -1,8 +1,12 @@
 # ClueGame
 
+> CS 205 Final Project
+
+> C++
+
 # Components
 
-## Rooms
+> Rooms
   * study
   * hall
   * lounge
@@ -13,21 +17,21 @@
   * kitchen
   * ballroom
 
-## Weapons
+> Weapons
   * candlestick
   * knife
   * revolver
   * rope
   * wrench
   
-## Suspects
+> Suspects
   * Colonel Mustard
   * Ms. Scarlet
   * Mrs. Peacock
   * Mrs. White
   * Professor Plum
   
-## Gameplay
+# Gameplay
 
 	1. Place character pawns in their corresponding boxes, place each weapon in a room then sort and shuffle rooms, weapons, and suspects
 	
