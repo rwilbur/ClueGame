@@ -3,4 +3,5 @@ project(ClueGame)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(ClueGame main.cpp GameLoop.cpp GameLoop.h)
+file(GLOB_RECURSE SOURCES RELATIVE ${CMAKE_SOURCE_DIR} "src/*.cpp")
+add_executable(ClueGame ${SOURCES})
