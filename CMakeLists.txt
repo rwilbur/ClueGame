@@ -3,4 +3,4 @@ project(ClueGame)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(ClueGame main.cpp GameLoop.cpp GameLoop.h)
+add_executable(ClueGame main.cpp GameLoop.cpp GameLoop.h Room.cpp Room.h Suspect.cpp Suspect.h)
