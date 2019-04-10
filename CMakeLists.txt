@@ -3,5 +3,5 @@ project(ClueGame)
 
 set(CMAKE_CXX_STANDARD 11)
 
-file(GLOB_RECURSE SOURCES RELATIVE ${CMAKE_SOURCE_DIR} "src/*.cpp")
-add_executable(ClueGame ${SOURCES})
+add_executable(ClueGame main.cpp GameLoop.cpp GameLoop.h Graphics.cpp Graphics.h Room.cpp Room.h Suspect.cpp Suspect.h)
+target_link_libraries(ClueGame -lOpenGL32 -lfreeGLUT)

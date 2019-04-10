@@ -76,5 +76,11 @@
 	20. move your pawn to the nearest room, you're not allowed to win and your turn is skipped
 
 	21. you still reveal cards to suggestions, return the cards back to the secret folder
+	
+# freeGlut Graphics
+
+> https://www.transmissionzero.co.uk/software/freeglut-devel/
+
+* Merge bin, lib and include folders with folders of same name in MinGW(local machine)
 
 [Requirements](https://docs.google.com/spreadsheets/d/1ti1WjbtKhvGzd9mszoxqClA6-e5JlTYFHJ9VQpGBHsY/edit?usp=sharing)

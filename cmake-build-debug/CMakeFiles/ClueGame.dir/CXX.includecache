@@ -22,6 +22,38 @@ string
 vector
 -
 
+C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Room.cpp
+Room.h
+C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Room.h
+
+C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Room.h
+fstream
+-
+iostream
+-
+iomanip
+-
+string
+-
+vector
+-
+
+C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Suspect.cpp
+Suspect.h
+C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Suspect.h
+
+C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Suspect.h
+fstream
+-
+iostream
+-
+iomanip
+-
+string
+-
+vector
+-
+
 C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/main.cpp
 iostream
 -

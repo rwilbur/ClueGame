@@ -31,8 +31,11 @@ void GameLoop::setRunning(bool value){
 /**
  * Starts the game loop
  */
-void GameLoop::startGame(){
+void GameLoop::startGame(int argc, char *argv[]){
     cout << "----------------------------- \n \n Welcome to Clue! \n \n----------------------------- " << endl;
+
+    graphicsPlay(argc, argv);
+
     setRunning(true);
     while(getRunning()){
         // game logic goes here
