@@ -149,6 +149,60 @@ GameLoop.cpp.s:
 	$(MAKE) -f CMakeFiles\ClueGame.dir\build.make CMakeFiles/ClueGame.dir/GameLoop.cpp.s
 .PHONY : GameLoop.cpp.s
 
+Room.obj: Room.cpp.obj
+
+.PHONY : Room.obj
+
+# target to build an object file
+Room.cpp.obj:
+	$(MAKE) -f CMakeFiles\ClueGame.dir\build.make CMakeFiles/ClueGame.dir/Room.cpp.obj
+.PHONY : Room.cpp.obj
+
+Room.i: Room.cpp.i
+
+.PHONY : Room.i
+
+# target to preprocess a source file
+Room.cpp.i:
+	$(MAKE) -f CMakeFiles\ClueGame.dir\build.make CMakeFiles/ClueGame.dir/Room.cpp.i
+.PHONY : Room.cpp.i
+
+Room.s: Room.cpp.s
+
+.PHONY : Room.s
+
+# target to generate assembly for a file
+Room.cpp.s:
+	$(MAKE) -f CMakeFiles\ClueGame.dir\build.make CMakeFiles/ClueGame.dir/Room.cpp.s
+.PHONY : Room.cpp.s
+
+Suspect.obj: Suspect.cpp.obj
+
+.PHONY : Suspect.obj
+
+# target to build an object file
+Suspect.cpp.obj:
+	$(MAKE) -f CMakeFiles\ClueGame.dir\build.make CMakeFiles/ClueGame.dir/Suspect.cpp.obj
+.PHONY : Suspect.cpp.obj
+
+Suspect.i: Suspect.cpp.i
+
+.PHONY : Suspect.i
+
+# target to preprocess a source file
+Suspect.cpp.i:
+	$(MAKE) -f CMakeFiles\ClueGame.dir\build.make CMakeFiles/ClueGame.dir/Suspect.cpp.i
+.PHONY : Suspect.cpp.i
+
+Suspect.s: Suspect.cpp.s
+
+.PHONY : Suspect.s
+
+# target to generate assembly for a file
+Suspect.cpp.s:
+	$(MAKE) -f CMakeFiles\ClueGame.dir\build.make CMakeFiles/ClueGame.dir/Suspect.cpp.s
+.PHONY : Suspect.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -188,6 +242,12 @@ help:
 	@echo ... GameLoop.obj
 	@echo ... GameLoop.i
 	@echo ... GameLoop.s
+	@echo ... Room.obj
+	@echo ... Room.i
+	@echo ... Room.s
+	@echo ... Suspect.obj
+	@echo ... Suspect.i
+	@echo ... Suspect.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

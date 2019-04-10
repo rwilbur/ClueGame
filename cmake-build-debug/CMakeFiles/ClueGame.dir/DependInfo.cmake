@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.cpp" "C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/cmake-build-debug/CMakeFiles/ClueGame.dir/GameLoop.cpp.obj"
+  "C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Room.cpp" "C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/cmake-build-debug/CMakeFiles/ClueGame.dir/Room.cpp.obj"
+  "C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Suspect.cpp" "C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/cmake-build-debug/CMakeFiles/ClueGame.dir/Suspect.cpp.obj"
   "C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/main.cpp" "C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/cmake-build-debug/CMakeFiles/ClueGame.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

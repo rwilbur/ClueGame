@@ -4,6 +4,12 @@
 CMakeFiles/ClueGame.dir/GameLoop.cpp.obj: ../GameLoop.cpp
 CMakeFiles/ClueGame.dir/GameLoop.cpp.obj: ../GameLoop.h
 
+CMakeFiles/ClueGame.dir/Room.cpp.obj: ../Room.cpp
+CMakeFiles/ClueGame.dir/Room.cpp.obj: ../Room.h
+
+CMakeFiles/ClueGame.dir/Suspect.cpp.obj: ../Suspect.cpp
+CMakeFiles/ClueGame.dir/Suspect.cpp.obj: ../Suspect.h
+
 CMakeFiles/ClueGame.dir/main.cpp.obj: ../GameLoop.h
 CMakeFiles/ClueGame.dir/main.cpp.obj: ../main.cpp
 
