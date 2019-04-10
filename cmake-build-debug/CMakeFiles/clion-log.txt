@@ -1,4 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2017.3.1\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame"
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/cmake-build-debug
