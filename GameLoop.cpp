@@ -33,6 +33,7 @@ void GameLoop::setRunning(bool value){
  */
 void GameLoop::startGame(){
     cout << "----------------------------- \n \n Welcome to Clue! \n \n----------------------------- " << endl;
+//    graphicsPlay(argc, argv);
     initRooms();
     initSuspects();
 //    initWeapons();

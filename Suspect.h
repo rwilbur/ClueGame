@@ -41,7 +41,7 @@ public:
      * Constructor with type
      * @param type
      */
-    Suspect::Suspect(SuspectType type);
+    Suspect(SuspectType type);
 
 
     /**

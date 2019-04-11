@@ -86,6 +86,12 @@
 		<Unit filename="C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.h">
 			<Option target="ClueGame"/>
 		</Unit>
+		<Unit filename="C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Graphics.cpp">
+			<Option target="ClueGame"/>
+		</Unit>
+		<Unit filename="C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Graphics.h">
+			<Option target="ClueGame"/>
+		</Unit>
 		<Unit filename="C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Room.cpp">
 			<Option target="ClueGame"/>
 		</Unit>

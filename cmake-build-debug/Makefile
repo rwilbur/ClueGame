@@ -149,6 +149,33 @@ GameLoop.cpp.s:
 	$(MAKE) -f CMakeFiles\ClueGame.dir\build.make CMakeFiles/ClueGame.dir/GameLoop.cpp.s
 .PHONY : GameLoop.cpp.s
 
+Graphics.obj: Graphics.cpp.obj
+
+.PHONY : Graphics.obj
+
+# target to build an object file
+Graphics.cpp.obj:
+	$(MAKE) -f CMakeFiles\ClueGame.dir\build.make CMakeFiles/ClueGame.dir/Graphics.cpp.obj
+.PHONY : Graphics.cpp.obj
+
+Graphics.i: Graphics.cpp.i
+
+.PHONY : Graphics.i
+
+# target to preprocess a source file
+Graphics.cpp.i:
+	$(MAKE) -f CMakeFiles\ClueGame.dir\build.make CMakeFiles/ClueGame.dir/Graphics.cpp.i
+.PHONY : Graphics.cpp.i
+
+Graphics.s: Graphics.cpp.s
+
+.PHONY : Graphics.s
+
+# target to generate assembly for a file
+Graphics.cpp.s:
+	$(MAKE) -f CMakeFiles\ClueGame.dir\build.make CMakeFiles/ClueGame.dir/Graphics.cpp.s
+.PHONY : Graphics.cpp.s
+
 Room.obj: Room.cpp.obj
 
 .PHONY : Room.obj
@@ -242,6 +269,9 @@ help:
 	@echo ... GameLoop.obj
 	@echo ... GameLoop.i
 	@echo ... GameLoop.s
+	@echo ... Graphics.obj
+	@echo ... Graphics.i
+	@echo ... Graphics.s
 	@echo ... Room.obj
 	@echo ... Room.i
 	@echo ... Room.s

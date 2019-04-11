@@ -104,9 +104,33 @@ CMakeFiles/ClueGame.dir/GameLoop.cpp.obj.provides: CMakeFiles/ClueGame.dir/GameL
 CMakeFiles/ClueGame.dir/GameLoop.cpp.obj.provides.build: CMakeFiles/ClueGame.dir/GameLoop.cpp.obj
 
 
+CMakeFiles/ClueGame.dir/Graphics.cpp.obj: CMakeFiles/ClueGame.dir/flags.make
+CMakeFiles/ClueGame.dir/Graphics.cpp.obj: ../Graphics.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ClueGame.dir/Graphics.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ClueGame.dir\Graphics.cpp.obj -c "C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame\Graphics.cpp"
+
+CMakeFiles/ClueGame.dir/Graphics.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ClueGame.dir/Graphics.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame\Graphics.cpp" > CMakeFiles\ClueGame.dir\Graphics.cpp.i
+
+CMakeFiles/ClueGame.dir/Graphics.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ClueGame.dir/Graphics.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame\Graphics.cpp" -o CMakeFiles\ClueGame.dir\Graphics.cpp.s
+
+CMakeFiles/ClueGame.dir/Graphics.cpp.obj.requires:
+
+.PHONY : CMakeFiles/ClueGame.dir/Graphics.cpp.obj.requires
+
+CMakeFiles/ClueGame.dir/Graphics.cpp.obj.provides: CMakeFiles/ClueGame.dir/Graphics.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\ClueGame.dir\build.make CMakeFiles/ClueGame.dir/Graphics.cpp.obj.provides.build
+.PHONY : CMakeFiles/ClueGame.dir/Graphics.cpp.obj.provides
+
+CMakeFiles/ClueGame.dir/Graphics.cpp.obj.provides.build: CMakeFiles/ClueGame.dir/Graphics.cpp.obj
+
+
 CMakeFiles/ClueGame.dir/Room.cpp.obj: CMakeFiles/ClueGame.dir/flags.make
 CMakeFiles/ClueGame.dir/Room.cpp.obj: ../Room.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ClueGame.dir/Room.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ClueGame.dir/Room.cpp.obj"
 	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ClueGame.dir\Room.cpp.obj -c "C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame\Room.cpp"
 
 CMakeFiles/ClueGame.dir/Room.cpp.i: cmake_force
@@ -130,7 +154,7 @@ CMakeFiles/ClueGame.dir/Room.cpp.obj.provides.build: CMakeFiles/ClueGame.dir/Roo
 
 CMakeFiles/ClueGame.dir/Suspect.cpp.obj: CMakeFiles/ClueGame.dir/flags.make
 CMakeFiles/ClueGame.dir/Suspect.cpp.obj: ../Suspect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ClueGame.dir/Suspect.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ClueGame.dir/Suspect.cpp.obj"
 	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ClueGame.dir\Suspect.cpp.obj -c "C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame\Suspect.cpp"
 
 CMakeFiles/ClueGame.dir/Suspect.cpp.i: cmake_force
@@ -156,6 +180,7 @@ CMakeFiles/ClueGame.dir/Suspect.cpp.obj.provides.build: CMakeFiles/ClueGame.dir/
 ClueGame_OBJECTS = \
 "CMakeFiles/ClueGame.dir/main.cpp.obj" \
 "CMakeFiles/ClueGame.dir/GameLoop.cpp.obj" \
+"CMakeFiles/ClueGame.dir/Graphics.cpp.obj" \
 "CMakeFiles/ClueGame.dir/Room.cpp.obj" \
 "CMakeFiles/ClueGame.dir/Suspect.cpp.obj"
 
@@ -164,13 +189,14 @@ ClueGame_EXTERNAL_OBJECTS =
 
 ClueGame.exe: CMakeFiles/ClueGame.dir/main.cpp.obj
 ClueGame.exe: CMakeFiles/ClueGame.dir/GameLoop.cpp.obj
+ClueGame.exe: CMakeFiles/ClueGame.dir/Graphics.cpp.obj
 ClueGame.exe: CMakeFiles/ClueGame.dir/Room.cpp.obj
 ClueGame.exe: CMakeFiles/ClueGame.dir/Suspect.cpp.obj
 ClueGame.exe: CMakeFiles/ClueGame.dir/build.make
 ClueGame.exe: CMakeFiles/ClueGame.dir/linklibs.rsp
 ClueGame.exe: CMakeFiles/ClueGame.dir/objects1.rsp
 ClueGame.exe: CMakeFiles/ClueGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ClueGame.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\wilip\Desktop\UVM Senior Year\Spring Semester\Software Engineering\ClueGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ClueGame.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ClueGame.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -180,6 +206,7 @@ CMakeFiles/ClueGame.dir/build: ClueGame.exe
 
 CMakeFiles/ClueGame.dir/requires: CMakeFiles/ClueGame.dir/main.cpp.obj.requires
 CMakeFiles/ClueGame.dir/requires: CMakeFiles/ClueGame.dir/GameLoop.cpp.obj.requires
+CMakeFiles/ClueGame.dir/requires: CMakeFiles/ClueGame.dir/Graphics.cpp.obj.requires
 CMakeFiles/ClueGame.dir/requires: CMakeFiles/ClueGame.dir/Room.cpp.obj.requires
 CMakeFiles/ClueGame.dir/requires: CMakeFiles/ClueGame.dir/Suspect.cpp.obj.requires
 
