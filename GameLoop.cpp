@@ -3,7 +3,7 @@
 //
 
 #include "GameLoop.h"
-
+#include "Room.h"
 
 /**
  * Default Constructor
@@ -33,11 +33,42 @@ void GameLoop::setRunning(bool value){
  */
 void GameLoop::startGame(){
     cout << "----------------------------- \n \n Welcome to Clue! \n \n----------------------------- " << endl;
+    initRooms();
+    initSuspects();
+//    initWeapons();
     setRunning(true);
     while(getRunning()){
         // game logic goes here
     }
 };
+
+/**
+ * Build array of suspects
+ */
+void GameLoop::initSuspects(){
+    for (int i = Mustard; i != Plum; ++i) {
+        try {
+            Suspect sus(static_cast<SuspectType>(i));
+            suspects.push_back(sus);
+        } catch(exception& e) {
+            printf("An error occurred: %s\n", e);
+        }
+    }
+}
+
+/**
+ * Build array of rooms
+ */
+void GameLoop::initRooms(){
+    for (int i = study; i != ballroom; ++i) {
+        try {
+            Room room(static_cast<Type>(i));
+            rooms.push_back(room);
+        } catch(exception& e) {
+            printf("An error occurred: %s\n", e);
+        }
+    }
+}
 
 /**
  * Ends the game loop

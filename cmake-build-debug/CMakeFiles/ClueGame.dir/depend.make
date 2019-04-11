@@ -3,6 +3,7 @@
 
 CMakeFiles/ClueGame.dir/GameLoop.cpp.obj: ../GameLoop.cpp
 CMakeFiles/ClueGame.dir/GameLoop.cpp.obj: ../GameLoop.h
+CMakeFiles/ClueGame.dir/GameLoop.cpp.obj: ../Room.h
 
 CMakeFiles/ClueGame.dir/Room.cpp.obj: ../Room.cpp
 CMakeFiles/ClueGame.dir/Room.cpp.obj: ../Room.h

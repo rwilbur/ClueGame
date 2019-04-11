@@ -13,24 +13,43 @@
 
 using namespace std;
 
+enum SuspectType {
+    Mustard,
+    Scarlet,
+    Peacock,
+    White,
+    Plum
+};
+
 class Suspect{
 public:
+
 
     /**
      * Name of the suspect
      */
     string title;
 
+
     /**
      * Default constructor
      */
     Suspect();
+
+
+    /**
+     * Constructor with type
+     * @param type
+     */
+    Suspect::Suspect(SuspectType type);
+
 
     /**
      * Get the title
      * @return
      */
     string getTitle();
+
 
     /**
      * Set the title

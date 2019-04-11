@@ -4,33 +4,49 @@
 
 > C++
 
-# Components
+# Classes
 
-> Rooms
-  * study
-  * hall
-  * lounge
-  * library
-  * billard room
-  * conservatory
-  * dining room
-  * kitchen
-  * ballroom
+> 1.Room - Will
+    
+    - [x] study
+    - [x] hall
+    - [x] lounge
+    - [x] library
+    - [x] billard room
+    - [x] conservatory
+    - [x] dining room
+    - [x] kitchen
+    - [x] ballroom
 
-> Weapons
-  * candlestick
-  * knife
-  * revolver
-  * rope
-  * wrench
+> 2.Weapon
+
+    - [ ] candlestick
+    - [ ] knife
+    - [ ] revolver
+    - [ ] rope
+    - [ ] wrench
   
-> Suspects
-  * Colonel Mustard
-  * Ms. Scarlet
-  * Mrs. Peacock
-  * Mrs. White
-  * Professor Plum
-  
+> 3.Suspect - Will
+
+    - [x] Colonel Mustard
+    - [x] Ms. Scarlet
+    - [x] Mrs. Peacock
+    - [x] Mrs. White
+    - [x] Professor Plum
+    
+    
+> 4.Game Loop - Will
+
+      - [x] Start game
+      - [x] End game
+
+
+> 5.Game Board
+
+
+> 6.Game Board Square
+
+
 # Gameplay
 
 	1. Place character pawns in their corresponding boxes, place each weapon in a room then sort and shuffle rooms, weapons, and suspects
