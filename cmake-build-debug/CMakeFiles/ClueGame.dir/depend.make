@@ -6,9 +6,6 @@ CMakeFiles/ClueGame.dir/GameLoop.cpp.obj: ../GameLoop.h
 CMakeFiles/ClueGame.dir/GameLoop.cpp.obj: ../Room.h
 CMakeFiles/ClueGame.dir/GameLoop.cpp.obj: ../Suspect.h
 
-CMakeFiles/ClueGame.dir/Graphics.cpp.obj: ../Graphics.cpp
-CMakeFiles/ClueGame.dir/Graphics.cpp.obj: ../Graphics.h
-
 CMakeFiles/ClueGame.dir/Room.cpp.obj: ../Room.cpp
 CMakeFiles/ClueGame.dir/Room.cpp.obj: ../Room.h
 
@@ -16,7 +13,6 @@ CMakeFiles/ClueGame.dir/Suspect.cpp.obj: ../Suspect.cpp
 CMakeFiles/ClueGame.dir/Suspect.cpp.obj: ../Suspect.h
 
 CMakeFiles/ClueGame.dir/main.cpp.obj: ../GameLoop.h
-CMakeFiles/ClueGame.dir/main.cpp.obj: ../Graphics.h
 CMakeFiles/ClueGame.dir/main.cpp.obj: ../Room.h
 CMakeFiles/ClueGame.dir/main.cpp.obj: ../Suspect.h
 CMakeFiles/ClueGame.dir/main.cpp.obj: ../main.cpp

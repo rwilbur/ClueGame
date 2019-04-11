@@ -9,8 +9,6 @@
 C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.cpp
 GameLoop.h
 C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.h
-Room.h
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Room.h
 
 C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.h
 fstream
@@ -27,22 +25,6 @@ Room.h
 C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Room.h
 Suspect.h
 C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Suspect.h
-
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Graphics.cpp
-Graphics.h
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Graphics.h
-
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Graphics.h
-stdlib.h
--
-windows.h
--
-sys/time.h
--
-GLUT/glut.h
--
-GL/glut.h
--
 
 C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Room.cpp
 Room.h
@@ -81,6 +63,4 @@ iostream
 -
 GameLoop.h
 C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.h
-Graphics.h
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Graphics.h
 

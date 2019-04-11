@@ -49,8 +49,10 @@ public:
 
     /**
      * Starts the game loop
+     * @param argc
+     * @param argv
      */
-    void startGame();
+    void startGame(int argc, char *argv[]);
 
     /**
      * Ends the game loop
