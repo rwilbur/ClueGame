@@ -6,57 +6,27 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.cpp
-GameLoop.h
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.h
+C:/Users/Riley/CLionProjects/ClueGame/Graphics.cpp
+Graphics.h
+C:/Users/Riley/CLionProjects/ClueGame/Graphics.h
+Shape.h
+C:/Users/Riley/CLionProjects/ClueGame/Shape.h
 
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.h
-fstream
+C:/Users/Riley/CLionProjects/ClueGame/Graphics.h
+stdlib.h
 -
+windows.h
+-
+sys/time.h
+-
+GLUT/glut.h
+-
+GL/glut.h
+-
+
+C:/Users/Riley/CLionProjects/ClueGame/Shape.h
 iostream
 -
-iomanip
+cmath
 -
-string
--
-vector
--
-
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Room.cpp
-Room.h
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Room.h
-
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Room.h
-fstream
--
-iostream
--
-iomanip
--
-string
--
-vector
--
-
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Suspect.cpp
-Suspect.h
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Suspect.h
-
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/Suspect.h
-fstream
--
-iostream
--
-iomanip
--
-string
--
-vector
--
-
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/main.cpp
-iostream
--
-GameLoop.h
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/GameLoop.h
 

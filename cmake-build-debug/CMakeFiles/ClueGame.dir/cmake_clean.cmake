@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ClueGame.dir/main.cpp.obj"
   "CMakeFiles/ClueGame.dir/GameLoop.cpp.obj"
+  "CMakeFiles/ClueGame.dir/Graphics.cpp.obj"
   "CMakeFiles/ClueGame.dir/Room.cpp.obj"
   "CMakeFiles/ClueGame.dir/Suspect.cpp.obj"
+  "CMakeFiles/ClueGame.dir/Shape.cpp.obj"
   "ClueGame.pdb"
   "ClueGame.exe"
   "ClueGame.exe.manifest"
