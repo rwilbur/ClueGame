@@ -1,3 +1,0 @@
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/cmake-build-debug/CMakeFiles/ClueGame.dir
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/wilip/Desktop/UVM Senior Year/Spring Semester/Software Engineering/ClueGame/cmake-build-debug/CMakeFiles/rebuild_cache.dir
