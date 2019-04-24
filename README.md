@@ -18,13 +18,13 @@
     - [x] kitchen
     - [x] ballroom
 
-> 2.Weapon
+> 2.Weapon - Riley W.
 
-    - [ ] candlestick
-    - [ ] knife
-    - [ ] revolver
-    - [ ] rope
-    - [ ] wrench
+    - [x] candlestick
+    - [x] knife
+    - [x] revolver
+    - [x] rope
+    - [x] wrench
   
 > 3.Suspect - Will
 
@@ -40,7 +40,9 @@
       - [x] Start game
       - [x] End game
 
-
+> 5.Note Sheet - Riley W.
+      - [x] Contains all suspects/weapons/rooms and has true false to mark if it is checked off
+      
 > 5.Game Board
 
 
