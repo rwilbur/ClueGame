@@ -37,6 +37,7 @@ public:
 private:
     std::string name;
     WeaponType weaponType;
+
 };
 
 
