@@ -4,15 +4,26 @@
 
 #include "Weapon.h"
 
-Weapon::Weapon() {
-    weaponName = "";
+#include <stdexcept>
+
+Weapon::Weapon(WeaponType weapon){
+    weaponType = weapon;
+    switch(weapon){
+        case Candlestick:   name = "Candlestick";
+        case Revolver:      name = "Revolver";
+        case Rope:          name = "Rope";
+        case Knife:         name = "Knife";
+        case Wrench:        name = "Wrench";
+        case Pipe:          name = "Pipe";
+
+        default: throw std::invalid_argument("Unknown weapon type");
+    }
 }
 
-Weapon::Weapon(std::string name) {
-    weaponName = name;
+std::string Weapon::getName() {
+    return name;
 }
 
-std::string Weapon::getWeaponName() {
-    return weaponName;
+WeaponType Weapon::getType() {
+    return weaponType;
 }
-
