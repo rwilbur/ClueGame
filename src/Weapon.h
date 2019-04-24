@@ -6,18 +6,37 @@
 #define CLUEGAME_WEAPON_H
 
 #include <string>
+
+enum WeaponType {
+    Rope,
+    Candlestick,
+    Revolver,
+    Knife,
+    Wrench,
+};
+
 class Weapon {
 
+
 public:
-    std::string weaponName;
+    Weapon() = default;
+    Weapon(WeaponType weapon);
 
-    Weapon();
+    ~Weapon() = default;
+    /**
+     * Gets the name of the weapon as a string
+     * @return string: The Weapon name
+     */
+    std::string getName();
+    /**
+     * Gets the weapon type as the WeaponType enum
+     * @return WeaponType: The weapon type
+     */
+    WeaponType getType();
 
-    Weapon(std::string name);
-
-    ~Weapon(){};
-
-    std::string getWeaponName();
+private:
+    std::string name;
+    WeaponType weaponType;
 
 };
 

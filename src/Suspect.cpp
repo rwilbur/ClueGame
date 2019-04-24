@@ -10,19 +10,19 @@ Suspect::Suspect(SuspectType type){
     try{
         switch(type) {
             case Mustard:
-                title = "Ballroom";
+                title = "Mustard";
                 break;
             case Scarlet:
-                title = "Study";
+                title = "Scarlet";
                 break;
             case Peacock:
-                title = "Hall";
+                title = "Peacock";
                 break;
             case White:
-                title = "Lounge";
+                title = "White";
                 break;
             case Plum:
-                title = "Library";
+                title = "Plum";
                 break;
         }
     } catch(exception& e) {

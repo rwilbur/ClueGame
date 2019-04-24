@@ -61,9 +61,9 @@ void GameLoop::initSuspects(){
  * Build array of rooms
  */
 void GameLoop::initRooms(){
-    for (int i = study; i != ballroom; ++i) {
+    for (int i = Study; i != Ballroom; ++i) {
         try {
-            Room room(static_cast<Type>(i));
+            Room room(static_cast<RoomType>(i));
             rooms.push_back(room);
         } catch(exception& e) {
             printf("An error occurred: %s\n", e);

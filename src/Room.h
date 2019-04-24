@@ -13,16 +13,16 @@
 
 using namespace std;
 
-enum Type {
-    study,
-    hall,
-    lounge,
-    library,
-    billard,
-    conservatory,
-    dining,
-    kitchen,
-    ballroom
+enum RoomType {
+    Study,
+    Hall,
+    Lounge,
+    Library,
+    Billard,
+    Conservatory,
+    Dining,
+    Kitchen,
+    Ballroom
 };
 
 
@@ -46,7 +46,7 @@ public:
      * Constructor with Type definition
      * @param type
      */
-    Room(Type type);
+    Room(RoomType type);
 
 
         /**
