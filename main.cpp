@@ -9,5 +9,7 @@ int main(int argc, char *argv[]) {
 
     game.startGame(argc, argv);
 
+    cout << (1);
+
     return 0;
 }
