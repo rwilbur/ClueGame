@@ -6,34 +6,34 @@
 
 Room::Room(){};
 
-Room::Room(Type type){
+Room::Room(RoomType type){
     try{
         switch(type) {
-            case ballroom:
+            case Ballroom:
                 title = "Ballroom";
                 break;
-            case study:
+            case Study:
                 title = "Study";
                 break;
-            case hall:
+            case Hall:
                 title = "Hall";
                 break;
-            case lounge:
+            case Lounge:
                 title = "Lounge";
                 break;
-            case library:
+            case Library:
                 title = "Library";
                 break;
-            case billard:
+            case Billiard:
                 title = "Billard Room";
                 break;
-            case conservatory:
+            case Conservatory:
                 title = "Conservatory";
                 break;
-            case dining:
+            case Dining:
                 title = "Dining Room";
                 break;
-            case kitchen:
+            case Kitchen:
                 title = "Kitchen";
                 break;
         }
