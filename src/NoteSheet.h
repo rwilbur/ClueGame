@@ -17,8 +17,6 @@ public:
     NoteSheet() = default;
     ~NoteSheet() = default;
 
-protected:
-
     /**
      * False means has not been seen, true means it has been
      * checked of the list and isn't that thing
@@ -39,7 +37,7 @@ protected:
                                             {Room(Hall),            false},
                                             {Room(Lounge),          false},
                                             {Room(Library),         false},
-                                            {Room(Billard),         false},
+                                            {Room(Billiard),        false},
                                             {Room(Conservatory),    false},
                                             {Room(Dining),          false},
                                             {Room(Kitchen),         false},
