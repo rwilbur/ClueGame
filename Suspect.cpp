@@ -4,7 +4,6 @@
 
 #include "Suspect.h"
 
-Suspect::Suspect(){}
 
 Suspect::Suspect(SuspectType type){
     try{
@@ -26,14 +25,19 @@ Suspect::Suspect(SuspectType type){
                 break;
         }
     } catch(exception& e) {
-        printf("An error occurred: %s\n", e);
+//        printf("An error occurred: %s\n", e);
     }
 };
 
-string Suspect::getTitle(){
+string Suspect::getTitle() const{
     return title;
 }
 
 void Suspect::setTitle(string newTitle){
     title = newTitle;
+}
+
+bool Suspect::operator<(const Suspect& other) const
+{
+    return this->getTitle() < other.getTitle();
 }

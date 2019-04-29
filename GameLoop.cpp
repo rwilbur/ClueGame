@@ -53,7 +53,7 @@ void GameLoop::initSuspects(){
             Suspect sus(static_cast<SuspectType>(i));
             suspects.push_back(sus);
         } catch(exception& e) {
-            printf("An error occurred: %s\n", e);
+            //printf("An error occurred: %s\n", e);
         }
     }
 }
@@ -67,7 +67,7 @@ void GameLoop::initRooms(){
             Room room(static_cast<RoomType>(i));
             rooms.push_back(room);
         } catch(exception& e) {
-            printf("An error occurred: %s\n", e);
+            //printf("An error occurred: %s\n", e);
         }
     }
 }

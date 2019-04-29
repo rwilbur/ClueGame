@@ -3,7 +3,7 @@
 //
 
 #include "Shape.h"
-#include "graphics.h"
+#include "Graphics.h"
 
 Shape::Shape() : area(0), perimeter(0) {
     // default color: black

@@ -39,7 +39,7 @@ public:
     /**
      * Default constructor
      */
-    Room();
+    Room() = default;
 
 
     /**
@@ -53,7 +53,7 @@ public:
          * Get the title of the room
          * @return
          */
-    string getTitle();
+    string getTitle() const;
 
 
     /**
@@ -61,6 +61,9 @@ public:
      * @param newTitle
      */
     void setTitle(string newTitle);
+
+
+    bool operator<(const Room& other) const;
 };
 
 #endif //CLUEGAME_ROOM_H

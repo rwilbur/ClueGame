@@ -26,3 +26,8 @@ std::string Weapon::getName() {
 WeaponType Weapon::getType() {
     return weaponType;
 }
+
+bool Weapon::operator<(const Weapon& other) const
+{
+    return weaponType < other.weaponType;
+}
