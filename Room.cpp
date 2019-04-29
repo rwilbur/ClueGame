@@ -37,8 +37,8 @@ Room::Room(RoomType type){
                 title = "Kitchen";
                 break;
         }
-    } catch(exception& e) {
-        printf("An error occurred: %s\n", e);
+    } catch(const std::exception &exc) {
+        std::cerr << exc.what();
     }
 };
 

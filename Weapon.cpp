@@ -14,6 +14,7 @@ Weapon::Weapon(WeaponType weapon){
         case Rope:          name = "Rope";
         case Knife:         name = "Knife";
         case Wrench:        name = "Wrench";
+        case Pipe:          name = "Pipe";
 
         default: throw std::invalid_argument("Unknown weapon type");
     }

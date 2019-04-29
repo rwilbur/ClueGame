@@ -12,6 +12,7 @@
 #include <vector>
 #include "Room.h"
 #include "Suspect.h"
+#include "Card.h"
 
 using namespace std;
 
@@ -19,9 +20,9 @@ class GameLoop{
 
 public:
 
-    vector<Room> rooms;
+    vector<RoomType> rooms;
 
-    vector<Suspect> suspects;
+    vector<SuspectType> suspects;
 
 //    vector<Weapon> weapons;
 

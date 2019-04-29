@@ -50,10 +50,10 @@ void GameLoop::startGame(int argc, char *argv[]){
 void GameLoop::initSuspects(){
     for (int i = Mustard; i != Plum; ++i) {
         try {
-            Suspect sus(static_cast<SuspectType>(i));
+            SuspectType sus(static_cast<SuspectType>(i));
             suspects.push_back(sus);
-        } catch(exception& e) {
-            printf("An error occurred: %s\n", e);
+        } catch(const std::exception &exc) {
+            std::cerr << exc.what();
         }
     }
 }
@@ -64,10 +64,10 @@ void GameLoop::initSuspects(){
 void GameLoop::initRooms(){
     for (int i = Study; i != Ballroom; ++i) {
         try {
-            Room room(static_cast<RoomType>(i));
+            RoomType room(static_cast<RoomType>(i));
             rooms.push_back(room);
-        } catch(exception& e) {
-            printf("An error occurred: %s\n", e);
+        } catch(const std::exception &exc) {
+            std::cerr << exc.what();
         }
     }
 }
