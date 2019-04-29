@@ -38,7 +38,7 @@ void GameLoop::startGame(int argc, char *argv[]){
     initSuspects();
 //    initWeapons();
     setRunning(true);
-    
+
     while(getRunning()){
         // game logic goes here
     }
