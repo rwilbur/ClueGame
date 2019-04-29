@@ -41,12 +41,15 @@
       - [x] End game
 
 > 5.Note Sheet - Riley W.
-      - [x] Contains all suspects/weapons/rooms and has true false to mark if it is checked off
+
+	- [x] Contains all suspects/weapons/rooms and has true false to mark if it is checked off
       
 > 5.Game Board - Will
+
 	- [x] Contains two-dimensional array of GameBoardSquares
 
 > 6.Game Board Square - Will
+
 	- [x] Contains properties that identify the square
 
 
