@@ -18,7 +18,7 @@ enum RoomType {
     Hall,
     Lounge,
     Library,
-    Billard,
+    Billiard,
     Conservatory,
     Dining,
     Kitchen,

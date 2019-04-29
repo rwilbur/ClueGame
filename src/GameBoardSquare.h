@@ -14,7 +14,26 @@
 class GameBoardSquare{
 public:
 
+    /**
+     * Default Constructor
+     */
+    GameBoardSquare() = default;
+    ~GameBoardSquare() = default;
 
+    /**
+     * True if a player is currently on this square
+     */
+    bool containsPlayer = false;
+
+    /**
+     * True if this squre is within a room on the board
+     */
+    bool isRoom = false;
+
+    /**
+     * If this square is within a room on the gameboard, this is the name of the room
+     */
+    std::string roomName = "";
 };
 
 #endif //CLUEGAME_GAMEBOARDSQUARE_H
