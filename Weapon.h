@@ -35,6 +35,8 @@ public:
      */
     WeaponType getType();
 
+    bool operator<(const Weapon& other) const;
+
 private:
     std::string name;
     WeaponType weaponType;

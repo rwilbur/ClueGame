@@ -54,7 +54,6 @@ void GameLoop::initSuspects(){
             suspects.push_back(sus);
         } catch(int& e) {
             cout << "An exception occurred in initSuspects. Exception: " << e << '\n';
-        }
     }
 }
 
@@ -68,7 +67,6 @@ void GameLoop::initRooms(){
             rooms.push_back(room);
         } catch(int& e) {
             cout << "An exception occurred in initRooms. Exception: " << e << '\n';
-        }
     }
 }
 

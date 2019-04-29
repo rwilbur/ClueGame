@@ -34,7 +34,7 @@ public:
     /**
      * Default constructor
      */
-    Suspect();
+    Suspect() = default;
 
 
     /**
@@ -48,7 +48,7 @@ public:
      * Get the title
      * @return
      */
-    string getTitle();
+    string getTitle() const;
 
 
     /**
@@ -56,6 +56,8 @@ public:
      * @param newTitle
      */
     void setTitle(string newTitle);
+
+    bool operator<(const Suspect& other) const;
 };
 
 #endif //CLUEGAME_SUSPECT_H

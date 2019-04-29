@@ -4,7 +4,6 @@
 
 #include "Room.h"
 
-Room::Room(){};
 
 Room::Room(RoomType type){
     try{
@@ -38,14 +37,19 @@ Room::Room(RoomType type){
                 break;
         }
     } catch(exception& e) {
-        printf("An error occurred: %s\n", e);
+//        printf("An error occurred: %s\n", e);
     }
 };
 
-string Room::getTitle(){
+string Room::getTitle() const{
     return title;
 }
 
 void Room::setTitle(string newTitle) {
     title = newTitle;
+}
+
+bool Room::operator<(const Room& other) const
+{
+    return this->getTitle() < other.getTitle();
 }
