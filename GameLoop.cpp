@@ -52,8 +52,8 @@ void GameLoop::initSuspects(){
         try {
             Suspect sus(static_cast<SuspectType>(i));
             suspects.push_back(sus);
-        } catch(exception& e) {
-            printf("An error occurred: %s\n", e);
+        } catch(int& e) {
+            cout << "An exception occurred in initSuspects. Exception: " << e << '\n';
         }
     }
 }
@@ -66,8 +66,8 @@ void GameLoop::initRooms(){
         try {
             Room room(static_cast<RoomType>(i));
             rooms.push_back(room);
-        } catch(exception& e) {
-            printf("An error occurred: %s\n", e);
+        } catch(int& e) {
+            cout << "An exception occurred in initRooms. Exception: " << e << '\n';
         }
     }
 }
