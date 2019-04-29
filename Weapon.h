@@ -13,6 +13,7 @@ enum WeaponType {
     Revolver,
     Knife,
     Wrench,
+    Pipe
 };
 
 class Weapon {

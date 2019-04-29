@@ -1,17 +1,66 @@
 #include "Graphics.h"
+#include "Shape.h"
 
+enum screenType {
+    start, game
+};
+
+//initialize
+screenType screen;
+//start
+Rectangles startBackground;
+Rectangles playButton;
+//game
 GLdouble width, height;
 int wd;
 
 void init() {
-    width = 500;
-    height = 500;
+    screen = start;
+    width = 750;
+    height = 600;
+
+    //default values
+    startBackground.set_position(-10,-10);
+    startBackground.set_fill(.09,.21,.13);
+    startBackground.set_dimensions(width+20,height+20);
+
+    playButton.set_position(130, 200);
+    playButton.set_fill(0.055, 0.169, 0.086);
+    playButton.set_dimensions(150, 60);
+
 }
 
 /* Initialize OpenGL Graphics */
 void initGL() {
     // Set "clearing" or background color
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // Black and opaque
+}
+
+void displayStart() {
+    startBackground.draw();
+
+    //draw clue title
+    string message = "CLUE";
+    glColor3f(1, 1, 1);//white
+    glRasterPos2i((width/2)-40, 120);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    //Make play button text
+    playButton.set_position((width/2)-75, 300);
+    playButton.draw();
+    message = "Play";
+    glColor3f(1, 1, 1);//white
+    glRasterPos2i((width/2)-25, 335 );
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+}
+
+void displayGame(){
+
 }
 
 /* Handler for window-repaint event. Call back when the window first appears and
@@ -30,9 +79,14 @@ void display() {
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
-    /*
-     * Draw here
-     */
+    switch (screen){
+        case start:
+            displayStart();
+            break;
+        case game:
+            displayGame();
+            break;
+    }
 
     glFlush();  // Render now
 }
@@ -74,6 +128,12 @@ void kbdS(int key, int x, int y) {
 
 void cursor(int x, int y) {
 
+    // if the mouse hovers over the play button, change color to lighter green
+    if (playButton.overlap(x, y)) {
+        playButton.set_fill(0.02, 0.098, 0.043);//darker green
+    } else {
+        playButton.set_fill(0.055, 0.169, 0.086);//green (Default color)
+    }
 
     glutPostRedisplay();
 }
@@ -82,7 +142,12 @@ void cursor(int x, int y) {
 // state will be GLUT_UP or GLUT_DOWN
 void mouse(int button, int state, int x, int y) {
 
-
+    if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == start) {
+        //if clicked on play button set switch to game screen
+        if (playButton.overlap(x, y)) {
+            screen = game;
+        }
+    }
 
     glutPostRedisplay();
 }

@@ -3,6 +3,7 @@
 //
 
 #include "GameLoop.h"
+#include "Graphics.h"
 
 /**
  * Default Constructor
@@ -37,7 +38,7 @@ void GameLoop::startGame(int argc, char *argv[]){
     initSuspects();
 //    initWeapons();
     setRunning(true);
-    
+
     while(getRunning()){
         // game logic goes here
     }
