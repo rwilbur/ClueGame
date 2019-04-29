@@ -26,10 +26,10 @@ file(GLOB SOURCE_FILES
         *.h
         )
 
-add_executable(main.cpp ${SOURCE_FILES})
+add_executable(ClueGame ${SOURCE_FILES})
 
 if (WIN32)
-    target_link_libraries (main.cpp ${OPENGL_LIBRARIES} freeglut)
+    target_link_libraries (ClueGame ${OPENGL_LIBRARIES} freeglut)
 elseif (APPLE OR UNIX)
-    target_link_libraries (main.cpp ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES})
+    target_link_libraries (ClueGame ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES})
 endif ()

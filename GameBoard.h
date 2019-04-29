@@ -19,7 +19,7 @@ public:
     /**
      * Default Constructor
      */
-    GameBoard() = default;
+    GameBoard();
     ~GameBoard() = default;
 
 
