@@ -47,13 +47,14 @@ void GameLoop::startGame(int argc, char *argv[]){
 /**
  * Build array of suspects
  */
-void GameLoop::initSuspects(){
+void GameLoop::initSuspects() {
     for (int i = Mustard; i != Plum; ++i) {
         try {
             Suspect sus(static_cast<SuspectType>(i));
             suspects.push_back(sus);
-        } catch(int& e) {
+        } catch (int &e) {
             cout << "An exception occurred in initSuspects. Exception: " << e << '\n';
+        }
     }
 }
 
@@ -65,8 +66,9 @@ void GameLoop::initRooms(){
         try {
             Room room(static_cast<RoomType>(i));
             rooms.push_back(room);
-        } catch(int& e) {
+        } catch (int &e) {
             cout << "An exception occurred in initRooms. Exception: " << e << '\n';
+        }
     }
 }
 
