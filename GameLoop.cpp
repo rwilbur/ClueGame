@@ -36,7 +36,8 @@ void GameLoop::startGame(int argc, char *argv[]){
     graphicsPlay(argc, argv);
     initRooms();
     initSuspects();
-//    initWeapons();
+    initWeapons();
+    initScenario();
     setRunning(true);
 
     while(getRunning()){
@@ -76,6 +77,20 @@ void GameLoop::initRooms(){
         try {
             Room room(static_cast<RoomType>(i));
             rooms.push_back(room);
+        } catch (int &e) {
+            cout << "An exception occurred in initRooms. Exception: " << e << '\n';
+        }
+    }
+}
+
+/**
+ * Build array of weapons
+ */
+void GameLoop::initWeapons(){
+    for (int i = Rope; i != Pipe; ++i) {
+        try {
+            Weapon weapon(static_cast<WeaponType>(i));
+            weapons.push_back(weapon);
         } catch (int &e) {
             cout << "An exception occurred in initRooms. Exception: " << e << '\n';
         }

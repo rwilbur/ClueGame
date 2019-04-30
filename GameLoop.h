@@ -72,7 +72,7 @@ public:
     /**
      * Randomly choose a weapon, suspect, and room
      */
-    void GameLoop::initScenario();
+    void initScenario();
 
     /**
      * Build array of rooms
@@ -83,6 +83,11 @@ public:
      * Build array of suspects
      */
     void initSuspects();
+
+    /**
+     * Build array of weapons
+     */
+    void initWeapons();
 
     /**
      * Roll Dice
