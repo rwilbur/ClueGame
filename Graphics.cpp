@@ -1,8 +1,9 @@
 #include "Graphics.h"
 #include "Shape.h"
+#include "NoteSheet.h"
 
 enum screenType {
-    start, game
+    start, game, notesheet
 };
 
 //initialize
@@ -13,6 +14,11 @@ Rectangles playButton;
 //game
 GLdouble width, height;
 int wd;
+//notesheet
+Rectangles notesBackground;
+Rectangles suspectsTitle;
+Rectangles weaponsTitle;
+Rectangles roomsTitle;
 
 void init() {
     screen = start;
@@ -28,6 +34,21 @@ void init() {
     playButton.set_fill(0.055, 0.169, 0.086);
     playButton.set_dimensions(150, 60);
 
+    notesBackground.set_position(100,20);
+    notesBackground.set_fill(.7,.7,.7);
+    notesBackground.set_dimensions(width-200,height-40);
+
+    suspectsTitle.set_position(100,20);
+    suspectsTitle.set_fill(.5,.5,.5);
+    suspectsTitle.set_dimensions(200,25);
+
+    weaponsTitle.set_position(100,170);
+    weaponsTitle.set_fill(.5,.5,.5);
+    weaponsTitle.set_dimensions(200,25);
+
+    roomsTitle.set_position(100,320);
+    roomsTitle.set_fill(.5,.5,.5);
+    roomsTitle.set_dimensions(200,25);
 }
 
 /* Initialize OpenGL Graphics */
@@ -63,6 +84,180 @@ void displayGame(){
 
 }
 
+void drawEmptyNote(int x, int y){
+    Rectangles emptyNote;
+    emptyNote.set_fill(.8,.8,.8);
+    emptyNote.set_position(x,y);
+    emptyNote.set_dimensions(20,20);
+    emptyNote.draw();
+}
+void drawCorrectNote(int x, int y){
+    Rectangles emptyNote;
+    emptyNote.set_fill(.2,.5,.2);
+    emptyNote.set_position(x,y);
+    emptyNote.set_dimensions(20,20);
+    emptyNote.draw();
+}
+void drawWrongNote(int x, int y){
+    Rectangles emptyNote;
+    emptyNote.set_fill(.68,.05,.07);
+    emptyNote.set_position(x,y);
+    emptyNote.set_dimensions(20,20);
+    emptyNote.draw();
+}
+void displayNotesheet(){
+    notesBackground.draw();
+    suspectsTitle.draw();
+    weaponsTitle.draw();
+    roomsTitle.draw();
+
+    //delete these once automated
+    drawEmptyNote(350,45);
+    drawEmptyNote(420,45);
+    drawCorrectNote(490,45);
+    drawWrongNote(560,45);
+
+    /*
+     * notes x values
+     * Columns  - 350, 420, 490, 560
+     */
+
+    glColor3f(1, 1, 1);//white
+    string message = "Suspects";
+    glRasterPos2i(105, 40);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Weapons";
+    glRasterPos2i(105, 190);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Rooms";
+    glRasterPos2i(105, 340);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+    //Suspect text
+    glColor3f(0, 0, 0);//Black
+    message = "Colonel Mustard";
+    glRasterPos2i(105, 65);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Ms. Scarlet";
+    glRasterPos2i(105, 90);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Mrs. Peacock";
+    glRasterPos2i(105, 115);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Mrs. White";
+    glRasterPos2i(105, 140);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Professor Plum";
+    glRasterPos2i(105, 165);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+    //Weapons
+    message = "Candlestick";
+    glRasterPos2i(105, 215);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Knife";
+    glRasterPos2i(105, 240);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Revolver";
+    glRasterPos2i(105, 265);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Rope";
+    glRasterPos2i(105, 290);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Wrench";
+    glRasterPos2i(105, 315);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+    //Rooms
+    message = "Study";
+    glRasterPos2i(105, 365);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Hall";
+    glRasterPos2i(105, 390);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Lounge";
+    glRasterPos2i(105, 415);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Library";
+    glRasterPos2i(105, 440);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Billards Room";
+    glRasterPos2i(105, 465);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Conservatory";
+    glRasterPos2i(105, 490);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Dining Room";
+    glRasterPos2i(105, 515);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Kitchen";
+    glRasterPos2i(105, 540);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    message = "Ballroom";
+    glRasterPos2i(105, 565);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+}
+
+
 /* Handler for window-repaint event. Call back when the window first appears and
  whenever the window needs to be re-painted. */
 void display() {
@@ -85,6 +280,9 @@ void display() {
             break;
         case game:
             displayGame();
+            break;
+        case notesheet:
+            displayNotesheet();
             break;
     }
 
@@ -145,7 +343,7 @@ void mouse(int button, int state, int x, int y) {
     if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == start) {
         //if clicked on play button set switch to game screen
         if (playButton.overlap(x, y)) {
-            screen = game;
+            screen = notesheet;
         }
     }
 
