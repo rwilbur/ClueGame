@@ -37,6 +37,11 @@ public:
 
 
     /**
+     * Name of the room
+     */
+    string doorDestination;
+
+    /**
      * Default constructor
      */
     Room() = default;
