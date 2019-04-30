@@ -12,6 +12,7 @@
 #include <vector>
 #include "Room.h"
 #include "Suspect.h"
+#include "Weapon.h"
 
 using namespace std;
 
@@ -23,7 +24,13 @@ public:
 
     vector<Suspect> suspects;
 
-//    vector<Weapon> weapons;
+    vector<Weapon> weapons;
+
+    Weapon weapon;
+
+    Suspect suspect;
+
+    Room room;
 
     /**
      * Determines if the game loop should exit
@@ -69,6 +76,16 @@ public:
      */
     void initSuspects();
 
+    /**
+     * Roll Dice
+     */
+    int rollDice();
+
+    /**
+     * Make an accusation and return whether it is valid
+     * @return
+     */
+    bool makeAccusation(Suspect suspect, Room room, Weapon weapon);
     };
 
 #endif //CLUEGAME_GAMELOOP_H

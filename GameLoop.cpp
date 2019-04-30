@@ -78,3 +78,26 @@ void GameLoop::initRooms(){
 void GameLoop::endGame(){
     setRunning(false);
 };
+
+
+//////////////////// GAME EVENTS /////////////////////
+
+
+bool GameLoop::makeAccusation(Suspect suspectGuess, Room roomGuess, Weapon weaponGuess){
+    return suspectGuess.title == suspect.title && roomGuess.title == room.title && weaponGuess.getName() == weapon.getName();
+}
+
+//////////////////// UTILITY FUNCTIONS /////////////////////
+
+int GameLoop::rollDice(){
+    int roll;
+    int min = 1;
+    int max = 6;
+
+    roll = rand() % (max - min + 1) + min;
+
+    return roll;
+};
+
+
+
