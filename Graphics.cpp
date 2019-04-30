@@ -2,7 +2,7 @@
 #include "Shape.h"
 
 enum screenType {
-    start, game
+    start, game, dice
 };
 
 //initialize
@@ -13,6 +13,17 @@ Rectangles playButton;
 //game
 GLdouble width, height;
 int wd;
+//dice
+Rectangles diceBackground;
+Rectangles diceBack;
+Circle dot1;
+Circle dot2;
+Circle dot3;
+Circle dot4;
+Circle dot5;
+Circle dot6;
+Rectangles rollButton;
+int lastRoll = 6;
 
 void init() {
     screen = start;
@@ -27,6 +38,32 @@ void init() {
     playButton.set_position(130, 200);
     playButton.set_fill(0.055, 0.169, 0.086);
     playButton.set_dimensions(150, 60);
+
+    diceBackground.set_position(250,150);
+    diceBackground.set_fill(.5,.5,.5);
+    diceBackground.set_dimensions(250,250);
+
+    diceBack.set_position(325,190);
+    diceBack.set_fill(.9,.9,.9);
+    diceBack.set_dimensions(100,100);
+
+    rollButton.set_position(325,325);
+    rollButton.set_fill(.4,.4,.4);
+    rollButton.set_dimensions(100,50);
+
+    dot1.set_radius(7);
+    dot2.set_radius(7);
+    dot3.set_radius(7);
+    dot4.set_radius(7);
+    dot5.set_radius(7);
+    dot6.set_radius(7);
+
+    dot1.set_fill(1,0,0);
+    dot2.set_fill(1,0,0);
+    dot3.set_fill(1,0,0);
+    dot4.set_fill(1,0,0);
+    dot5.set_fill(1,0,0);
+    dot6.set_fill(1,0,0);
 
 }
 
@@ -63,6 +100,88 @@ void displayGame(){
 
 }
 
+void displayDice(){
+    diceBackground.draw();
+    diceBack.draw();
+    rollButton.draw();
+
+    //Make roll button text
+    string message = "Roll";
+    glColor3f(1, 1, 1);//white
+    glRasterPos2i(352,355);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+}
+
+void drawDiceDots(int n){
+    for (int i = 0; i < 7; ++i){
+
+    }
+
+        switch (n){
+        case 1:
+            dot1.set_position(375,240);
+            dot1.draw();
+            break;
+        case 2:
+            dot1.set_position(355,265);
+            dot2.set_position(395,215);
+            dot1.draw();
+            dot2.draw();
+            break;
+        case 3:
+            dot1.set_position(355,265);
+            dot2.set_position(395,215);
+            dot3.set_position(375,240);
+            dot1.draw();
+            dot2.draw();
+            dot3.draw();
+            break;
+        case 4:
+            dot1.set_position(355,215);
+            dot2.set_position(355,265);
+            dot3.set_position(395,215);
+            dot4.set_position(395,265);
+            dot1.draw();
+            dot2.draw();
+            dot3.draw();
+            dot4.draw();
+            break;
+        case 5:
+            dot1.set_position(355,215);
+            dot2.set_position(355,265);
+            dot3.set_position(395,215);
+            dot4.set_position(395,265);
+            dot5.set_position(375,240);
+            dot1.draw();
+            dot2.draw();
+            dot3.draw();
+            dot4.draw();
+            dot5.draw();
+            break;
+        case 6:
+            dot1.set_position(355,215);
+            dot2.set_position(355,240);
+            dot3.set_position(355,265);
+            dot4.set_position(395,215);
+            dot5.set_position(395,240);
+            dot6.set_position(395,265);
+            dot1.draw();
+            dot2.draw();
+            dot3.draw();
+            dot4.draw();
+            dot5.draw();
+            dot6.draw();
+            break;
+    }
+    glFlush();
+}
+
+int rollDice() {
+    return ((rand() % 6)+1);
+}
+
 /* Handler for window-repaint event. Call back when the window first appears and
  whenever the window needs to be re-painted. */
 void display() {
@@ -85,6 +204,10 @@ void display() {
             break;
         case game:
             displayGame();
+            break;
+        case dice:
+            displayDice();
+            drawDiceDots(lastRoll);
             break;
     }
 
@@ -135,6 +258,13 @@ void cursor(int x, int y) {
         playButton.set_fill(0.055, 0.169, 0.086);//green (Default color)
     }
 
+    // if the mouse hovers over the roll button darken grey
+    if (rollButton.overlap(x, y)) {
+        rollButton.set_fill(0.3, 0.3, 0.3);
+    } else {
+        rollButton.set_fill(0.4, 0.4, 0.4);// (Default color)
+    }
+
     glutPostRedisplay();
 }
 
@@ -146,6 +276,14 @@ void mouse(int button, int state, int x, int y) {
         //if clicked on play button set switch to game screen
         if (playButton.overlap(x, y)) {
             screen = game;
+        }
+    }if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == dice){
+        //if clicked on roll button run roll dice function
+        if (playButton.overlap(x, y)) {
+            lastRoll = rollDice();
+            cout<<lastRoll;
+            drawDiceDots(lastRoll);
+            glutPostRedisplay();
         }
     }
 

@@ -2,6 +2,7 @@
 #define Graphics_h
 
 #include <stdlib.h>
+#include <vector>
 #ifdef _WIN32
 #include <windows.h>
 #else
