@@ -2,7 +2,7 @@
 #include "Shape.h"
 
 enum screenType {
-    start, game
+    start, game, dice
 };
 
 //initialize
@@ -204,6 +204,8 @@ void display() {
             break;
         case game:
             displayGame();
+            break;
+        case dice:
             displayDice();
             drawDiceDots(lastRoll);
             break;
@@ -275,7 +277,7 @@ void mouse(int button, int state, int x, int y) {
         if (playButton.overlap(x, y)) {
             screen = game;
         }
-    }if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == game){
+    }if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == dice){
         //if clicked on roll button run roll dice function
         if (playButton.overlap(x, y)) {
             lastRoll = rollDice();
