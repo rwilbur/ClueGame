@@ -70,6 +70,11 @@ public:
     void endGame();
 
     /**
+     * Randomly choose a weapon, suspect, and room
+     */
+    void initScenario();
+
+    /**
      * Build array of rooms
      */
     void initRooms();
@@ -78,6 +83,11 @@ public:
      * Build array of suspects
      */
     void initSuspects();
+
+    /**
+     * Build array of weapons
+     */
+    void initWeapons();
 
     /**
      * Roll Dice
