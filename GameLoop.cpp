@@ -44,6 +44,16 @@ void GameLoop::startGame(int argc, char *argv[]){
     }
 };
 
+void GameLoop::initScenario(){
+    int randomWeapon = rand() % (5 - 1 + 1) + 1;
+    int randomSuspect = rand() % (5 - 1 + 1) + 1;
+    int randomRoom = rand() % (9 - 1 + 1) + 1;
+
+    weapon = weapons[randomWeapon];
+    suspect = suspects[randomSuspect];
+    room = rooms[randomRoom];
+};
+
 /**
  * Build array of suspects
  */

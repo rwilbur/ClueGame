@@ -70,6 +70,11 @@ public:
     void endGame();
 
     /**
+     * Randomly choose a weapon, suspect, and room
+     */
+    void GameLoop::initScenario();
+
+    /**
      * Build array of rooms
      */
     void initRooms();
