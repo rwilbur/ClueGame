@@ -13,6 +13,7 @@
 #include "Room.h"
 #include "Suspect.h"
 #include "Weapon.h"
+#include "GameBoard.h"
 
 using namespace std;
 
@@ -31,6 +32,8 @@ public:
     Suspect suspect;
 
     Room room;
+
+    GameBoard board;
 
     /**
      * Determines if the game loop should exit
@@ -86,6 +89,11 @@ public:
      * @return
      */
     bool makeAccusation(Suspect suspect, Room room, Weapon weapon);
+
+    /**
+     * Print the game board
+     */
+    void printBoard();
     };
 
 #endif //CLUEGAME_GAMELOOP_H

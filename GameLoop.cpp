@@ -4,19 +4,19 @@
 
 #include "GameLoop.h"
 #include "Graphics.h"
+#include "GameBoard.h"
 
 /**
  * Default Constructor
  */
-GameLoop::GameLoop(): running(false){
-
-};
+GameLoop::GameLoop(): running(false){};
 
 /**
  * Get running
  * @return
  */
 bool GameLoop::getRunning(){
+
     return running;
 };
 
@@ -98,6 +98,16 @@ int GameLoop::rollDice(){
 
     return roll;
 };
+
+void GameLoop::printBoard(){
+    for (int i = 0; i < board.getBoard().size(); ++i) {
+        for(int j = 0; j < board.getBoard()[i].size(); j++){
+            GameBoardSquare currentSquare = board.getBoard()[i][j];
+            cout << currentSquare.getRoomName() << endl;
+        }
+    }
+}
+
 
 
 

@@ -20,8 +20,6 @@ public:
      * Default Constructor
      */
     GameBoard();
-    ~GameBoard() = default;
-
 
     /**
      * Two-dimensional vector of board squares that models the game board
@@ -29,10 +27,16 @@ public:
     vector<vector<GameBoardSquare>> squares;
 
     /**
-     * Vector of rooms
+     * Get vector of squares on the board
+     * @return
      */
-    vector<Room> rooms;
+    vector<vector<GameBoardSquare>> getBoard();
 
+    /**
+     * Get vector of rooms on the board
+     * @return
+     */
+    vector<Room> getRooms();
 
     /**
      * Game Board
