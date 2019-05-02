@@ -17,6 +17,14 @@
 
 using namespace std;
 
+enum Direction{
+    north,
+    east,
+    south,
+    west
+
+};
+
 class GameLoop{
 
 public:
@@ -34,6 +42,8 @@ public:
     Room room;
 
     GameBoard board;
+
+    int playerCoordinatesXY[2];
 
     /**
      * Determines if the game loop should exit
@@ -68,6 +78,16 @@ public:
      * Ends the game loop
      */
     void endGame();
+
+    /**
+     * Moves player in a direction
+     * @param dir direction [north, east, south, west]
+     */
+    void movePlayer(Direction dir);
+    /**
+     * Take the player turn
+     */
+    void playerMoveTurn();
 
     /**
      * Randomly choose a weapon, suspect, and room

@@ -40,10 +40,80 @@ void GameLoop::startGame(int argc, char *argv[]){
     initScenario();
     setRunning(true);
 
+
+    // Set player in a square
+    board.squares[0][8].setContainsPlayer("Scarlet");  //Scarlet is the player
+    playerCoordinatesXY[0] = 0;
+    playerCoordinatesXY[1] = 8;
+
+    bool moveNotAccuse = true;
+
     while(getRunning()){
-        // game logic goes here
+
+
+        //moveNotAccuse = true; // Todo: Player needs to decide this
+
+        //If the player is in a room and you have decided to move instead of accusing
+        if(board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].getIsRoom() && not moveNotAccuse){
+            //Todo: accusation screen
+        }
+        else{
+            playerMoveTurn();
+        }
+
+        //Todo: move computer player
+
+
+
+
     }
 };
+
+
+void GameLoop::playerMoveTurn(){
+
+
+    int numSpacesAllowedToMove = rollDice();
+    for(; numSpacesAllowedToMove > 0; numSpacesAllowedToMove--){
+
+        //Todo: Move player to an adjacent space via gui
+
+
+        if(board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].getIsRoom()){
+            numSpacesAllowedToMove++; //Make it so we can move without a penalty if we are in a room
+        }
+    }
+
+};
+
+void GameLoop::movePlayer(Direction dir){
+    switch(dir){
+        case north:
+            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].containsPlayer = false;
+            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].playerName = "";
+
+            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]--].setContainsPlayer("Scarlet");
+        case east:
+            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].containsPlayer = false;
+            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].playerName = "";
+
+            board.squares[playerCoordinatesXY[0]++][playerCoordinatesXY[1]].setContainsPlayer("Scarlet");
+        case south:
+            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].containsPlayer = false;
+            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].playerName = "";
+
+            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]++].setContainsPlayer("Scarlet");
+        case west:
+            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].containsPlayer = false;
+            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].playerName = "";
+
+            board.squares[playerCoordinatesXY[0]--][playerCoordinatesXY[1]].setContainsPlayer("Scarlet");
+
+
+
+
+    }
+}
 
 void GameLoop::initScenario(){
     int randomWeapon = rand() % (5 - 1 + 1) + 1;
