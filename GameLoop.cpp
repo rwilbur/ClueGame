@@ -6,6 +6,7 @@
 #include "Graphics.h"
 #include "GameBoard.h"
 
+
 /**
  * Default Constructor
  */
@@ -42,9 +43,13 @@ void GameLoop::startGame(int argc, char *argv[]){
 
 
     // Set player in a square
-    board.squares[0][8].setContainsPlayer("Scarlet");  //Scarlet is the player
-    playerCoordinatesXY[0] = 0;
-    playerCoordinatesXY[1] = 8;
+
+
+    humanPlayer.character = Suspect(Scarlet);
+    humanPlayer.playerCoordinatesX = 0;
+    humanPlayer.playerCoordinatesY = 8;
+
+    board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY].setContainsPlayer(humanPlayer.getName());  //Scarlet is the player
 
     bool moveNotAccuse = true;
 
@@ -53,8 +58,7 @@ void GameLoop::startGame(int argc, char *argv[]){
 
         //moveNotAccuse = true; // Todo: Player needs to decide this
 
-        //If the player is in a room and you have decided to accuse
-        if(board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].getIsRoom() && not moveNotAccuse){
+        if(board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY].getIsRoom() && not moveNotAccuse){
             //Todo: accusation screen
         }
         else{
@@ -77,7 +81,7 @@ void GameLoop::playerMoveTurn(){
         //Todo: Move player to an adjacent space via gui
 
 
-        if(board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].getIsRoom()){
+        if(board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY].getIsRoom()){
             numSpacesAllowedToMove++; //Make it so we can move without a penalty if we are in a room
         }
     }
@@ -87,27 +91,25 @@ void GameLoop::playerMoveTurn(){
 void GameLoop::movePlayer(Direction dir){
     switch(dir){
         case north:
-            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].containsPlayer = false;
-            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].playerName = "";
+            board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY].containsPlayer = false;
+            board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY].playerName = "";
 
-            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]--].setContainsPlayer("Scarlet");
+            board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY--].setContainsPlayer(humanPlayer.getName());
         case east:
-            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].containsPlayer = false;
-            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].playerName = "";
+            board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY].containsPlayer = false;
+            board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY].playerName = "";
 
-            board.squares[playerCoordinatesXY[0]++][playerCoordinatesXY[1]].setContainsPlayer("Scarlet");
+            board.squares[humanPlayer.playerCoordinatesX++][humanPlayer.playerCoordinatesY].setContainsPlayer(humanPlayer.getName());
         case south:
-            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].containsPlayer = false;
-            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].playerName = "";
+            board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY].containsPlayer = false;
+            board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY].playerName = "";
 
-            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]++].setContainsPlayer("Scarlet");
+            board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY++].setContainsPlayer(humanPlayer.getName());
         case west:
-            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].containsPlayer = false;
-            board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].playerName = "";
+            board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY].containsPlayer = false;
+            board.squares[humanPlayer.playerCoordinatesX][humanPlayer.playerCoordinatesY].playerName = "";
 
-            board.squares[playerCoordinatesXY[0]--][playerCoordinatesXY[1]].setContainsPlayer("Scarlet");
-
-
+            board.squares[humanPlayer.playerCoordinatesX--][humanPlayer.playerCoordinatesY].setContainsPlayer(humanPlayer.getName());
 
 
     }
