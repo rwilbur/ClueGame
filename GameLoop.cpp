@@ -53,7 +53,7 @@ void GameLoop::startGame(int argc, char *argv[]){
 
         //moveNotAccuse = true; // Todo: Player needs to decide this
 
-        //If the player is in a room and you have decided to move instead of accusing
+        //If the player is in a room and you have decided to accuse
         if(board.squares[playerCoordinatesXY[0]][playerCoordinatesXY[1]].getIsRoom() && not moveNotAccuse){
             //Todo: accusation screen
         }
@@ -62,8 +62,6 @@ void GameLoop::startGame(int argc, char *argv[]){
         }
 
         //Todo: move computer player
-
-
 
 
     }
@@ -179,7 +177,7 @@ void GameLoop::endGame(){
 
 
 bool GameLoop::makeAccusation(Suspect suspectGuess, Room roomGuess, Weapon weaponGuess){
-    return suspectGuess.title == suspect.title && roomGuess.title == room.title && weaponGuess.getName() == weapon.getName();
+    return suspectGuess.title == suspect.title && roomGuess.title == room.title && weaponGuess.getTitle() == weapon.getTitle();
 }
 
 //////////////////// UTILITY FUNCTIONS /////////////////////
@@ -194,15 +192,11 @@ int GameLoop::rollDice(){
     return roll;
 };
 
-void GameLoop::printBoard(){
+void GameLoop::printBoard() {
     for (int i = 0; i < board.getBoard().size(); ++i) {
-        for(int j = 0; j < board.getBoard()[i].size(); j++){
+        for (int j = 0; j < board.getBoard()[i].size(); j++) {
             GameBoardSquare currentSquare = board.getBoard()[i][j];
             cout << currentSquare.getRoomName() << endl;
         }
     }
 }
-
-
-
-

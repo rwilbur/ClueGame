@@ -24,14 +24,10 @@ Suspect::Suspect(SuspectType type){
                 title = "Plum";
                 break;
         }
-    } catch(exception& e) {
-//        printf("An error occurred: %s\n", e);
+    } catch (int &e) {
+        cout << "An exception occurred in Suspect constructor. Exception: " << e << '\n';
     }
 };
-
-string Suspect::getTitle() const{
-    return title;
-}
 
 void Suspect::setTitle(string newTitle){
     title = newTitle;

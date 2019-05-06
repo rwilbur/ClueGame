@@ -10,6 +10,7 @@
 #include <iomanip>
 #include <string>
 #include <vector>
+#include "Card.h"
 
 using namespace std;
 
@@ -21,35 +22,24 @@ enum SuspectType {
     Plum
 };
 
-class Suspect{
+class Suspect : public Card{
 public:
-
 
     /**
      * Name of the suspect
      */
     string title;
 
-
     /**
      * Default constructor
      */
     Suspect() = default;
-
 
     /**
      * Constructor with type
      * @param type
      */
     Suspect(SuspectType type);
-
-
-    /**
-     * Get the title
-     * @return
-     */
-    string getTitle() const;
-
 
     /**
      * Set the title

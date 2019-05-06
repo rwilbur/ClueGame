@@ -9,18 +9,13 @@
 Weapon::Weapon(WeaponType weapon){
     weaponType = weapon;
     switch(weapon){
-        case Candlestick:   name = "Candlestick";
-        case Revolver:      name = "Revolver";
-        case Rope:          name = "Rope";
-        case Knife:         name = "Knife";
-        case Wrench:        name = "Wrench";
-
+        case Candlestick:   title = "Candlestick";
+        case Revolver:      title = "Revolver";
+        case Rope:          title = "Rope";
+        case Knife:         title = "Knife";
+        case Wrench:        title = "Wrench";
         default: throw std::invalid_argument("Unknown weapon type");
     }
-}
-
-std::string Weapon::getName() {
-    return name;
 }
 
 WeaponType Weapon::getType() {

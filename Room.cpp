@@ -37,14 +37,9 @@ Room::Room(RoomType type){
                 break;
         }
     } catch (int &e) {
-        cout << "An exception occurred in initSuspects. Exception: " << e << '\n';
+        cout << "An exception occurred in Room constructor. Exception: " << e << '\n';
     }
 };
-
-string Room::getTitle() const{
-    return title;
-}
-
 void Room::setTitle(string newTitle) {
     title = newTitle;
 }

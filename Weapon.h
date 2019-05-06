@@ -6,6 +6,7 @@
 #define CLUEGAME_WEAPON_H
 
 #include <string>
+#include "Card.h"
 
 enum WeaponType {
     Rope,
@@ -16,19 +17,23 @@ enum WeaponType {
     Pipe
 };
 
-class Weapon {
+class Weapon : public Card {
 
 
 public:
+
+    /**
+     * Default constructor
+     */
     Weapon() = default;
+    ~Weapon() = default;
+
+    /**
+     * Constructor with WeaponType
+     * @param weapon
+     */
     Weapon(WeaponType weapon);
 
-    ~Weapon() = default;
-    /**
-     * Gets the name of the weapon as a string
-     * @return string: The Weapon name
-     */
-    std::string getName();
     /**
      * Gets the weapon type as the WeaponType enum
      * @return WeaponType: The weapon type
@@ -38,7 +43,7 @@ public:
     bool operator<(const Weapon& other) const;
 
 private:
-    std::string name;
+    std::string title;
     WeaponType weaponType;
 
 };
