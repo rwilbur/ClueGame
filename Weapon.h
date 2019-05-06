@@ -5,8 +5,14 @@
 #ifndef CLUEGAME_WEAPON_H
 #define CLUEGAME_WEAPON_H
 
+#include <fstream>
+#include <iostream>
+#include <iomanip>
 #include <string>
+#include <vector>
 #include "Card.h"
+
+using namespace std;
 
 enum WeaponType {
     Rope,
@@ -35,12 +41,6 @@ public:
     Weapon(WeaponType weapon);
 
     /**
-     * Gets the name of the weapon as a string
-     * @return string: The Weapon name
-     */
-    std::string getTitle();
-
-    /**
      * Gets the weapon type as the WeaponType enum
      * @return WeaponType: The weapon type
      */
@@ -49,7 +49,6 @@ public:
     bool operator<(const Weapon& other) const;
 
 private:
-    std::string title;
     WeaponType weaponType;
 
 };

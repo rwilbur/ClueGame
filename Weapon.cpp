@@ -4,23 +4,32 @@
 
 #include "Weapon.h"
 
-#include <stdexcept>
-
 Weapon::Weapon(WeaponType weapon){
     weaponType = weapon;
-    switch(weapon){
-        case Candlestick:   title = "Candlestick";
-        case Revolver:      title = "Revolver";
-        case Rope:          title = "Rope";
-        case Knife:         title = "Knife";
-        case Wrench:        title = "Wrench";
-
-        default: throw std::invalid_argument("Unknown weapon type");
+    try {
+        switch (weapon) {
+            case Candlestick:
+                title = "Candlestick";
+                break;
+            case Revolver:
+                title = "Revolver";
+                break;
+            case Rope:
+                title = "Rope";
+                break;
+            case Knife:
+                title = "Knife";
+                break;
+            case Wrench:
+                title = "Wrench";
+                break;
+            case Pipe:
+                title = "Pipe";
+                break;
+        }
+    } catch (int &e) {
+        cout << "An exception occurred in initSuspects. Exception: " << e << '\n';
     }
-}
-
-std::string Weapon::getTitle() {
-    return title;
 }
 
 WeaponType Weapon::getType() {

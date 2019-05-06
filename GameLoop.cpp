@@ -127,9 +127,10 @@ void GameLoop::initScenario(){
  * Build array of suspects
  */
 void GameLoop::initSuspects() {
-    for (int i = Mustard; i != Plum; ++i) {
+    for (int i = Mustard; i <= Plum; ++i) {
         try {
             Suspect sus(static_cast<SuspectType>(i));
+            cout << sus.getTitle() << endl;
             suspects.push_back(sus);
         } catch (int &e) {
             cout << "An exception occurred in initSuspects. Exception: " << e << '\n';
@@ -141,9 +142,10 @@ void GameLoop::initSuspects() {
  * Build array of rooms
  */
 void GameLoop::initRooms(){
-    for (int i = Study; i != Ballroom; ++i) {
+    for (int i = Study; i <= Ballroom; ++i) {
         try {
             Room room(static_cast<RoomType>(i));
+            cout << room.getTitle() << endl;
             rooms.push_back(room);
         } catch (int &e) {
             cout << "An exception occurred in initRooms. Exception: " << e << '\n';
@@ -155,9 +157,10 @@ void GameLoop::initRooms(){
  * Build array of weapons
  */
 void GameLoop::initWeapons(){
-    for (int i = Rope; i != Pipe; ++i) {
+    for (int i = Rope; i <= Pipe; ++i) {
         try {
             Weapon weapon(static_cast<WeaponType>(i));
+            cout << weapon.getTitle() << endl;
             weapons.push_back(weapon);
         } catch (int &e) {
             cout << "An exception occurred in initRooms. Exception: " << e << '\n';

@@ -41,10 +41,6 @@ Room::Room(RoomType type){
     }
 };
 
-string Room::getTitle() const{
-    return title;
-}
-
 void Room::setTitle(string newTitle) {
     title = newTitle;
 }

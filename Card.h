@@ -12,26 +12,26 @@
 #include <vector>
 
 class Card {
-//public:
-//    std::string title;
-//
-//    /**
-//     * Default constructor
-//     */
-//    Card() = default;
-//    ~Card() = default;
-//
-//    /**
-//     * Constructor with title
-//     * @param title
-//     */
-//    Card(std::string title);
-//
-//    /**
-//     * Gets the name of the card as a string
-//     * @return string: The card title
-//     */
-//    std::string getTitle() const;
+public:
+    std::string title;
+
+    /**
+     * Default constructor
+     */
+    Card() = default;
+    ~Card() = default;
+
+    /**
+     * Constructor with title
+     * @param title
+     */
+    Card(std::string title);
+
+    /**
+     * Gets the name of the card as a string
+     * @return string: The card title
+     */
+    std::string getTitle() const;
 
 };
 

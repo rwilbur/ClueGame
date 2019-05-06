@@ -29,10 +29,6 @@ Suspect::Suspect(SuspectType type){
     }
 };
 
-string Suspect::getTitle() const{
-    return title;
-}
-
 void Suspect::setTitle(string newTitle){
     title = newTitle;
 }
