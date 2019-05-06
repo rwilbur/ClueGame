@@ -12,29 +12,27 @@
 #include <vector>
 
 class Card {
-public:
+//public:
+//    std::string title;
+//
+//    /**
+//     * Default constructor
+//     */
+//    Card() = default;
+//    ~Card() = default;
+//
+//    /**
+//     * Constructor with title
+//     * @param title
+//     */
+//    Card(std::string title);
+//
+//    /**
+//     * Gets the name of the card as a string
+//     * @return string: The card title
+//     */
+//    std::string getTitle() const;
 
-    /**
-     * Default constructor
-     */
-    Card() = default;
-    ~Card() = default;
-
-    /**
-     * Gets the name of the card as a string
-     * @return string: The card title
-     */
-    std::string getTitle() const;
-
-    /**
-     * Used for debugging
-     * @param other
-     * @return
-     */
-    bool operator<(const Card& other) const;
-
-private:
-    std::string title;
 };
 
 #endif //CLUEGAME_CARD_H

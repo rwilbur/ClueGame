@@ -30,10 +30,12 @@ enum RoomType {
 class Room : public Card{
 public:
 
+
     /**
      * Name of the room
      */
     string title;
+
 
     /**
      * Name of the room
@@ -45,17 +47,27 @@ public:
      */
     Room() = default;
 
+
     /**
      * Constructor with Type definition
      * @param type
      */
     Room(RoomType type);
 
+
+    /**
+     * Get the title of the room
+     * @return
+     */
+    string getTitle() const;
+
+
     /**
      * Set title of the room
      * @param newTitle
      */
     void setTitle(string newTitle);
+
 
     bool operator<(const Room& other) const;
 };

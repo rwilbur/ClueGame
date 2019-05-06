@@ -35,6 +35,12 @@ public:
     Weapon(WeaponType weapon);
 
     /**
+     * Gets the name of the weapon as a string
+     * @return string: The Weapon name
+     */
+    std::string getTitle();
+
+    /**
      * Gets the weapon type as the WeaponType enum
      * @return WeaponType: The weapon type
      */

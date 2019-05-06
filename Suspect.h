@@ -25,21 +25,32 @@ enum SuspectType {
 class Suspect : public Card{
 public:
 
+
     /**
      * Name of the suspect
      */
     string title;
+
 
     /**
      * Default constructor
      */
     Suspect() = default;
 
+
     /**
      * Constructor with type
      * @param type
      */
     Suspect(SuspectType type);
+
+
+    /**
+     * Get the title
+     * @return
+     */
+    string getTitle() const;
+
 
     /**
      * Set the title

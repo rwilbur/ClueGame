@@ -3,7 +3,11 @@
 //
 
 #include "Card.h"
-
-std::string Card::getTitle() const {
-    return title;
-}
+//
+//Card::Card(std::string titleVar) {
+//    title = titleVar;
+//}
+//
+//std::string Card::getTitle() const {
+//    return title;
+//}
