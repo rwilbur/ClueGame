@@ -3,6 +3,7 @@
 //
 
 #include "GameBoardSquare.h"
+#include "Shape.h"
 
 
 GameBoardSquare::GameBoardSquare(bool containsPlayerVar, bool isRoomVar, std::string playerNameVar, std::string roomNameVar){
@@ -45,3 +46,41 @@ std::string GameBoardSquare::getPlayerName(){
 void GameBoardSquare::setPlayerName(std::string name){
     playerName = name;
 };
+
+void GameBoardSquare::draw(int x, int y){
+
+    Rectangles square;
+    square.set_position(x,y);
+    square.set_dimensions(20,20);
+    if(roomName == "Study"){
+        square.set_fill(1,0,0);
+    }
+    else if(roomName == "Library"){
+        square.set_fill(0,1,0);
+    }
+    else if(roomName == "Billiard Room"){
+        square.set_fill(0,0,1);
+    }
+    else if(roomName == "Conservatory"){
+        square.set_fill(1,1,0);
+    }
+    else if(roomName == "Hall"){
+        square.set_fill(1,0,1);
+    }
+    else if(roomName == "Ballroom"){
+        square.set_fill(0,1,1);
+    }
+    else if(roomName == "Lounge"){
+        square.set_fill(1,.5,.5);
+    }
+    else if(roomName == "Kitchen"){
+        square.set_fill(.5,0,0);
+    }
+    else if(roomName == "Dining Room"){
+        square.set_fill(.5,.2,.5);
+    }else{
+        square.set_fill(.2,.2,.2);
+    }
+
+    square.draw();
+}
