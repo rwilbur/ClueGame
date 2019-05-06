@@ -96,6 +96,11 @@ public:
      */
     void setPlayerName(std::string name);
 
+    /**
+     * Draws a gameboard square at specific coordinate point
+     */
+     void draw(int x, int y);
+
 };
 
 #endif //CLUEGAME_GAMEBOARDSQUARE_H

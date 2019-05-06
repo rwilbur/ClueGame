@@ -24,7 +24,7 @@ Room::Room(RoomType type){
                 title = "Library";
                 break;
             case Billiard:
-                title = "Billard Room";
+                title = "Billiard Room";
                 break;
             case Conservatory:
                 title = "Conservatory";

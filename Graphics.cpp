@@ -1,6 +1,9 @@
 #include "Graphics.h"
 #include "Shape.h"
 #include "NoteSheet.h"
+#include "GameLoop.h"
+#include "GameBoardSquare.h"
+#include "GameBoard.h"
 
 enum screenType {
     start, game, dice, notesheet
@@ -119,7 +122,8 @@ void displayStart() {
 }
 
 void displayGame(){
-
+   GameBoard board;
+   board.draw();
 }
 
 void displayDice(){
@@ -200,9 +204,9 @@ void drawDiceDots(int n){
     glFlush();
 }
 
-int rollDice() {
-    return ((rand() % 6)+1);
-}
+//int rollDice() {
+//    return ((rand() % 6)+1);
+//}
 
 void drawEmptyNote(int x, int y){
     Rectangles emptyNote;
@@ -479,7 +483,7 @@ void mouse(int button, int state, int x, int y) {
     }if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == dice){
         //if clicked on roll button run roll dice function
         if (playButton.overlap(x, y)) {
-            lastRoll = rollDice();
+//           lastRoll = rollDice();
             cout<<lastRoll;
             drawDiceDots(lastRoll);
             glutPostRedisplay();

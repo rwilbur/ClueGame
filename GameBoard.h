@@ -39,6 +39,11 @@ public:
     vector<Room> getRooms();
 
     /**
+     * draws all squares in gameboard
+     */
+     void draw();
+
+    /**
      * Game Board
      *
      * [] [] [] [] x  [] [] x  [] [] [] [] x  [] x  [] [] [] [] []
