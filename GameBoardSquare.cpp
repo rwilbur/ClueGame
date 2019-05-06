@@ -51,7 +51,7 @@ void GameBoardSquare::draw(int x, int y){
 
     Rectangles square;
     square.set_position(x,y);
-    square.set_dimensions(20,20);
+    square.set_dimensions(26,26);
     if(roomName == "Study"){
         square.set_fill(1,0,0);
     }

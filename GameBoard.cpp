@@ -36,6 +36,9 @@ GameBoard::GameBoard(){
             } else if(i > 18 && j > 17){
                 GameBoardSquare newSquare(false, true, "", "Kitchen");
                 newVector.push_back(newSquare);
+            }else {
+                GameBoardSquare newSquare(false,false,"","");
+                newVector.push_back(newSquare);
             }
         }
         squares.push_back(newVector);
@@ -47,17 +50,17 @@ vector<vector<GameBoardSquare>> GameBoard::getBoard(){
 }
 
 void GameBoard::draw(){
-    int x =20;
-    int y = 20;
+    int x =80;
+    int y = 15;
     for (int i = 0; i < squares.size(); ++i){
         vector<GameBoardSquare> rows = squares[i];
 
         for (int j = 0; j < rows.size(); ++j){
             GameBoardSquare gbs = rows[j];
             gbs.draw(x,y);
-            x += 25;
+            x += 28;
         }
-        x=20;
-        y += 25;
+        x=80;
+        y += 28;
     }
 }
