@@ -51,7 +51,7 @@ void GameBoardSquare::draw(int x, int y){
 
     Rectangles square;
     square.set_position(x,y);
-    square.set_dimensions(26,26);
+    square.set_dimensions(23,23);
     if(roomName == "Study"){
         square.set_fill(1,0,0);
     }
@@ -80,6 +80,7 @@ void GameBoardSquare::draw(int x, int y){
         square.set_fill(.5,.2,.5);
     }else{
         square.set_fill(.2,.2,.2);
+        square.set_dimensions(20,20);
     }
 
     square.draw();
@@ -87,8 +88,8 @@ void GameBoardSquare::draw(int x, int y){
     //draw player on square.
     if(containsPlayer == true){
         Circle player;
-        player.set_position(x+13,y+13);
-        player.set_radius(12);
+        player.set_position(x+11,y+10);
+        player.set_radius(10);
         if(playerName == "Mustard"){
             player.set_fill(.9,.7,.1);
         }

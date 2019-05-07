@@ -6,9 +6,9 @@
 
 
 GameBoard::GameBoard(){
-    for (int i = 0; i < 20; ++i) {
+    for (int i = 0; i < 26; ++i) {
         vector<GameBoardSquare> newVector;
-        for(int j = 0; j < 20; j++){
+        for(int j = 0; j < 26; j++){
             if(i < 5 && j < 8) {
                 GameBoardSquare newSquare(false, true, "", "Study");
                 newVector.push_back(newSquare);
@@ -51,16 +51,16 @@ vector<vector<GameBoardSquare>> GameBoard::getBoard(){
 
 void GameBoard::draw(){
     int x =80;
-    int y = 15;
+    int y = 10;
     for (int i = 0; i < squares.size(); ++i){
         vector<GameBoardSquare> rows = squares[i];
 
         for (int j = 0; j < rows.size(); ++j){
             GameBoardSquare gbs = rows[j];
             gbs.draw(x,y);
-            x += 28;
+            x += 22;
         }
         x=80;
-        y += 28;
+        y += 22;
     }
 }
