@@ -87,8 +87,8 @@ void GameBoardSquare::draw(int x, int y){
     //draw player on square.
     if(containsPlayer == true){
         Circle player;
-        player.set_position(x,y);
-        player.set_radius(14);
+        player.set_position(x+13,y+13);
+        player.set_radius(12);
         if(playerName == "Mustard"){
             player.set_fill(.9,.7,.1);
         }
