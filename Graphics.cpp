@@ -2,6 +2,7 @@
 #include "Shape.h"
 #include "NoteSheet.h"
 #include "GameBoard.h"
+#include "GameLoop.h"
 
 enum screenType {
     start, game, dice, notesheet
@@ -15,6 +16,7 @@ Rectangles playButton;
 //game
 GLdouble width, height;
 Rectangles notesButton;
+Rectangles diceButton;
 int wd;
 //dice
 Rectangles diceBackground;
@@ -136,6 +138,19 @@ void displayGame(){
     for (int i = 0; i < message.length(); ++i) {
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
     }
+
+    //Dice button
+    diceButton.set_position(660,80);
+    diceButton.set_fill(.5,.5,.5);
+    diceButton.set_dimensions(80,40);
+    diceButton.draw();
+    glColor3f(1, 1, 1);//black
+    message = "Dice";
+    glRasterPos2i(672,105);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
     //room titles
     glColor3f(0, 0, 0);//black
     message = "Study";
@@ -194,6 +209,18 @@ void displayDice(){
     string message = "Roll";
     glColor3f(1, 1, 1);//white
     glRasterPos2i(352,355);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
+    //back to game button
+    backButton.set_position(660,20);
+    backButton.set_fill(.5,.5,.5);
+    backButton.set_dimensions(80,40);
+    backButton.draw();
+    glColor3f(1, 1, 1);//white
+    message = "Back";
+    glRasterPos2i(667,45);
     for (int i = 0; i < message.length(); ++i) {
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
     }
@@ -527,13 +554,15 @@ void cursor(int x, int y) {
     } else {
         playButton.set_fill(0.055, 0.169, 0.086);//green (Default color)
     }
-    // if the mouse hovers over the notes or back button, change color to lighter green
+    // if the mouse hovers over the notes, dice or back button, change color to lighter green
     if (notesButton.overlap(x,y)) {
         backButton.set_fill(0.2, 0.2, 0.2);//darker grey
         notesButton.set_fill(0.2, 0.2, 0.2);
+        diceButton.set_fill(0.2, 0.2, 0.2);
     } else {
         backButton.set_fill(0.5, 0.5, 0.5);//grey (Default color)
         notesButton.set_fill(0.5, 0.5, 0.5);
+        diceButton.set_fill(0.5, 0.5, 0.5);
     }
 
     // if the mouse hovers over the roll button darken grey
@@ -556,9 +585,11 @@ void mouse(int button, int state, int x, int y) {
             screen = game;
         }
     }if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == game) {
-        //if clicked on play button set switch to game screen
         if (notesButton.overlap(x, y)) {
             screen = notesheet;
+        }
+        if (diceButton.overlap(x, y)) {
+            screen = dice;
         }
     }if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == notesheet) {
         //if clicked on play button set switch to game screen
@@ -567,11 +598,13 @@ void mouse(int button, int state, int x, int y) {
         }
     }if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == dice){
         //if clicked on roll button run roll dice function
-        if (playButton.overlap(x, y)) {
-           lastRoll = rollDice();
-            cout<<lastRoll;
+        if (rollButton.overlap(x, y)) {
+            lastRoll = rollDice();
             drawDiceDots(lastRoll);
             glutPostRedisplay();
+        }
+        if (backButton.overlap(x, y)) {
+            screen = game;
         }
     }
 
