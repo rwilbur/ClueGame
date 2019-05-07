@@ -14,7 +14,7 @@
 #include "Suspect.h"
 #include "Weapon.h"
 #include "GameBoard.h"
-
+#include "Player.h"
 using namespace std;
 
 enum Direction{
@@ -43,7 +43,8 @@ public:
 
     GameBoard board;
 
-    int playerCoordinatesXY[2];
+    Player humanPlayer;
+    Player computerPlayer;
 
     /**
      * Determines if the game loop should exit
