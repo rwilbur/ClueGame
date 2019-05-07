@@ -120,8 +120,55 @@ void displayStart() {
 }
 
 void displayGame(){
-   GameBoard board;
-   board.draw();
+    GameBoard board;
+    board.draw();
+
+    glColor3f(0, 0, 0);//black
+    string message = "Study";
+    glRasterPos2i(130,70);
+    for (int i = 0; i < message.length(); ++i) {
+       glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+    message = "Library";
+    glRasterPos2i(330,110);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+    message = "Billiard Room";
+    glRasterPos2i(495,90);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+    message = "Conservatory";
+    glRasterPos2i(100,230);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+    message = "Hall";
+    glRasterPos2i(530,300);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+    message = "Ballroom";
+    glRasterPos2i(110,360);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+    message = "Lounge";
+    glRasterPos2i(325,500);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+    message = "Dining Room";
+    glRasterPos2i(100,530);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+    message = "Kitchen";
+    glRasterPos2i(520,510);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
 }
 
 void displayDice(){
@@ -202,9 +249,9 @@ void drawDiceDots(int n){
     glFlush();
 }
 
-//int rollDice() {
-//    return ((rand() % 6)+1);
-//}
+int rollDice() {
+    return ((rand() % 6)+1);
+}
 
 void drawEmptyNote(int x, int y){
     Rectangles emptyNote;
@@ -481,7 +528,7 @@ void mouse(int button, int state, int x, int y) {
     }if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == dice){
         //if clicked on roll button run roll dice function
         if (playButton.overlap(x, y)) {
-//           lastRoll = rollDice();
+           lastRoll = rollDice();
             cout<<lastRoll;
             drawDiceDots(lastRoll);
             glutPostRedisplay();
