@@ -83,4 +83,28 @@ void GameBoardSquare::draw(int x, int y){
     }
 
     square.draw();
+
+    //draw player on square.
+    if(containsPlayer == true){
+        Circle player;
+        player.set_position(x,y);
+        player.set_radius(14);
+        if(playerName == "Mustard"){
+            player.set_fill(.9,.7,.1);
+        }
+        else if(playerName == "Scarlet"){
+            player.set_fill(.58,.05,.37);
+        }
+        else if(playerName == "Peacock"){
+            player.set_fill(.04,.47,.36);
+        }
+        else if(playerName == "White"){
+            player.set_fill(1,1,1);
+        }
+        else if(playerName == "Plum"){
+            player.set_fill(.18,.1,.5);
+        }
+        player.draw();
+    }
+
 }

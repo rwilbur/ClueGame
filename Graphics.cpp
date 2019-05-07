@@ -1,8 +1,6 @@
 #include "Graphics.h"
 #include "Shape.h"
 #include "NoteSheet.h"
-#include "GameLoop.h"
-#include "GameBoardSquare.h"
 #include "GameBoard.h"
 
 enum screenType {
