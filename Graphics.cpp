@@ -14,6 +14,7 @@ Rectangles startBackground;
 Rectangles playButton;
 //game
 GLdouble width, height;
+Rectangles notesButton;
 int wd;
 //dice
 Rectangles diceBackground;
@@ -32,6 +33,7 @@ Rectangles notesBackground;
 Rectangles suspectsTitle;
 Rectangles weaponsTitle;
 Rectangles roomsTitle;
+Rectangles backButton;
 
 void init() {
     screen = start;
@@ -123,8 +125,20 @@ void displayGame(){
     GameBoard board;
     board.draw();
 
+    //notes button
+    notesButton.set_position(660,20);
+    notesButton.set_fill(.5,.5,.5);
+    notesButton.set_dimensions(80,40);
+    notesButton.draw();
+    glColor3f(1, 1, 1);//black
+    string message = "Notes";
+    glRasterPos2i(667,45);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+    //room titles
     glColor3f(0, 0, 0);//black
-    string message = "Study";
+    message = "Study";
     glRasterPos2i(130,70);
     for (int i = 0; i < message.length(); ++i) {
        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
@@ -280,19 +294,27 @@ void displayNotesheet(){
     weaponsTitle.draw();
     roomsTitle.draw();
 
+    //back to game button
+    backButton.set_position(660,20);
+    backButton.set_fill(.5,.5,.5);
+    backButton.set_dimensions(80,40);
+    backButton.draw();
+    glColor3f(1, 1, 1);//black
+    string message = "Back";
+    glRasterPos2i(667,45);
+    for (int i = 0; i < message.length(); ++i) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
+    }
+
     //delete these once automated
     drawEmptyNote(350,45);
     drawEmptyNote(420,45);
     drawCorrectNote(490,45);
     drawWrongNote(560,45);
 
-    /*
-     * notes x values
-     * Columns  - 350, 420, 490, 560
-     */
-
+    //left hand column labels
     glColor3f(1, 1, 1);//white
-    string message = "Suspects";
+    message = "Suspects";
     glRasterPos2i(105, 40);
     for (int i = 0; i < message.length(); ++i) {
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, message[i]);
@@ -505,6 +527,14 @@ void cursor(int x, int y) {
     } else {
         playButton.set_fill(0.055, 0.169, 0.086);//green (Default color)
     }
+    // if the mouse hovers over the notes or back button, change color to lighter green
+    if (notesButton.overlap(x,y)) {
+        backButton.set_fill(0.2, 0.2, 0.2);//darker grey
+        notesButton.set_fill(0.2, 0.2, 0.2);
+    } else {
+        backButton.set_fill(0.5, 0.5, 0.5);//grey (Default color)
+        notesButton.set_fill(0.5, 0.5, 0.5);
+    }
 
     // if the mouse hovers over the roll button darken grey
     if (rollButton.overlap(x, y)) {
@@ -523,6 +553,16 @@ void mouse(int button, int state, int x, int y) {
     if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == start) {
         //if clicked on play button set switch to game screen
         if (playButton.overlap(x, y)) {
+            screen = game;
+        }
+    }if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == game) {
+        //if clicked on play button set switch to game screen
+        if (notesButton.overlap(x, y)) {
+            screen = notesheet;
+        }
+    }if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == notesheet) {
+        //if clicked on play button set switch to game screen
+        if (backButton.overlap(x, y)) {
             screen = game;
         }
     }if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && screen == dice){
